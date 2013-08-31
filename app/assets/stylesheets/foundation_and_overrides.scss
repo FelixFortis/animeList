@@ -1301,3 +1301,7 @@ $default-float: left;
 // $topbar-sticky-class: ".sticky";
 
 @import 'foundation';
+
+.text-80 {
+  font-size: 80% !important;
+}
