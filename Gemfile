@@ -14,6 +14,7 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
   gem 'uglifier', '>= 1.0.3'
   gem 'angularjs-rails'
+  gem 'compass-rails'
   gem 'zurb-foundation'
 end
 
