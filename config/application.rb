@@ -64,5 +64,13 @@ module AnimeList
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    #devise
+    config.assets.initialize_on_precompile = false
+
+    #factory girl
+    config.generators do |g|
+      g.factory_girl dir: 'spec/factories'
+    end
   end
 end

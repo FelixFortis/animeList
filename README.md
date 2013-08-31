@@ -1,0 +1,1 @@
+This app will be for logging all of the anime that you've watched and what you thought of it.
