@@ -4,17 +4,28 @@
       / Title Area
       %li.name
         %h1
-          %a{:href => root_path} animeList
+          = link_to 'animeList', root_path
+      - if user_signed_in?
+        %li.divider
+          = current_user.email
       / Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone
       %li.toggle-topbar.menu-icon
         %a{:href => "#"}
-          %span Menu
     %section.top-bar-section
       / Right Nav Section
-      %ul.right
-        %li.divider.hide-for-small
-        %li
-          %a{:href => "#"} Login
-        %li.divider.hide-for-small
-        %li
-          %a{:href => "#"} Sign up
+      - if user_signed_in?
+        %ul.right
+          %li.divider.hide-for-small
+          %li
+            = link_to 'Profile', edit_user_registration_path
+          %li.divider.hide-for-small
+          %li
+            = link_to 'Logout', destroy_user_session_path, method: :delete
+      - else
+        %ul.right
+          %li.divider.hide-for-small
+          %li
+            = link_to 'Login', new_user_session_path
+          %li.divider.hide-for-small
+          %li
+            = link_to 'Sign up', new_user_registration_path
