@@ -1,3 +1,15 @@
+
 .text-center
   %h1 Welcome to animeList
-  %p Helping you keep track of your favourite anime.
+  = image_tag("wolflogo.jpg", :alt => "animeList")
+  %p Helping you find and keep track of your favourite anime.
+  %br
+  .row
+    .small-3.columns &nbsp;
+    .small-6.columns
+      %ul.button-group.round.even-2
+        %li
+          %a.button.button-black{:href => "#"} Login
+        %li
+          %a.button.button-black{:href => "#"} Sign up
+    .small-3.columns &nbsp;

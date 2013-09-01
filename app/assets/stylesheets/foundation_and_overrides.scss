@@ -1305,11 +1305,28 @@ $default-float: left;
 .text-80 {
   font-size: 80% !important;
 }
+.button-black {
+  background-color: #111;
+  border-color: #001;
+  &:hover {
+    background-color: #222;
+    border-color: #001;
+  }
+}
 footer {
   position: fixed;
   right: 0;
   left: 0;
   z-index: 1030;
-  margin-bottom: 0;
+  margin-bottom: -10px;
   bottom: 0;
+  background-color: #111;
+  padding: 10px 0 0 0;
+}
+.footer-text {
+  font-size: 80%;
+  color: #fff;
+}
+.white-text {
+  color: #fff;
 }
