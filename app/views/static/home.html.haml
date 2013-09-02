@@ -1,4 +1,3 @@
-
 .text-center
   %h1 Welcome to animeList
   = image_tag("wolflogo.jpg", :alt => "animeList")
@@ -9,7 +8,7 @@
     .small-6.columns
       %ul.button-group.round.even-2
         %li
-          %a.button.button-black{:href => new_user_session_path} Login
+          = link_to "Login", new_user_session_path, :class => "button button-black"
         %li
-          %a.button.button-black{:href => new_user_registration_path} Sign up
+          = link_to "Sign up", new_user_registration_path, :class => "button button-black"
     .small-3.columns &nbsp;

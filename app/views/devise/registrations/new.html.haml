@@ -7,5 +7,6 @@
     = f.input :password, :required => true
     = f.input :password_confirmation, :required => true
   .form-actions
-    = f.button :submit, "Sign up"
+    %br
+    = f.button :submit, "Sign up", :class => "button round button-black"
 = render "devise/shared/links"
