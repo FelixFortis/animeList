@@ -1303,17 +1303,23 @@ $default-float: left;
 @import 'foundation';
 
 a {
-  color: #efa417;
+  color: #ffffff;
+  &:hover {
+    color: #efa417;
+  }
 }
-.text-80 {
-  font-size: 80% !important;
+.alert {
+  color: #fff;
+  background-color: #ef2b17;
+  text-align: center;
 }
 .button-black {
   background-color: #111;
   border-color: #001;
   &:hover {
-    background-color: #222;
+    background-color: #111;
     border-color: #001;
+    color: #efa417;
   }
 }
 footer {
@@ -1329,6 +1335,20 @@ footer {
 .footer-text {
   font-size: 80%;
   color: #fff;
+}
+.name h1 a:hover {
+  color: #efa417;
+}
+.notice {
+  color: #fff;
+  background-color: #efa417;
+  text-align: center;
+}
+.text-80 {
+  font-size: 80% !important;
+}
+.top-bar-section ul li > a:hover {
+  color: #efa417;
 }
 .white-text {
   color: #fff;

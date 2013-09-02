@@ -7,7 +7,9 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'annotate'
 gem 'haml'
 gem 'haml-rails'
+gem 'html2haml'
 gem 'devise'
+gem 'simple_form'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
