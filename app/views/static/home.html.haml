@@ -6,9 +6,10 @@
   .row
     .small-3.columns &nbsp;
     .small-6.columns
-      %ul.button-group.round.even-2
-        %li
-          = link_to "Login", new_user_session_path, :class => "button button-black"
-        %li
-          = link_to "Sign up", new_user_registration_path, :class => "button button-black"
+      - if !user_signed_in?
+        %ul.button-group.round.even-2
+          %li
+            = link_to "Login", new_user_session_path, :class => "button button-black"
+          %li
+            = link_to "Sign up", new_user_registration_path, :class => "button button-black"
     .small-3.columns &nbsp;
