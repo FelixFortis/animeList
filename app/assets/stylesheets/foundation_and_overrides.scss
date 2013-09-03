@@ -1310,7 +1310,7 @@ a {
 }
 .alert {
   color: #fff;
-  background-color: #ef2b17;
+  background-color: #c60f13;
   text-align: center;
 }
 .button-black {
@@ -1343,6 +1343,12 @@ footer {
   color: #fff;
   background-color: #efa417;
   text-align: center;
+}
+.red-link a {
+  color: #c60f13 !important;
+  &:hover {
+    font-weight: bold;
+  }
 }
 .text-80 {
   font-size: 80% !important;
