@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @show.name
+%p
+  %b Description:
+  = @show.description
+%p
+  %b Total episodes:
+  = @show.total_episodes
+%p
+  %b Image url:
+  = @show.image_url
+
+= link_to 'Edit', edit_show_path(@show)
+\|
+= link_to 'Back', shows_path
