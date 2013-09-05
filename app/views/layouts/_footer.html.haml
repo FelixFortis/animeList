@@ -3,14 +3,14 @@
     .small-9.columns.footer-text
       %ul.inline-list
         %li
-          %h6.link-orange
-            %a{:href => '/contact'} Contact
+          %h6
+            = link_to 'Contact', contact_path
         %li
           %h6
             |
         %li
           %h6
-            %a{:href => '/about'} About
+            = link_to 'About', about_path
     .small-3.columns.footer-text
       %ul.inline-list
         %li
