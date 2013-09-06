@@ -27,7 +27,7 @@ describe Show do
       @new_show.should_not be_valid
     end
 
-    it "should bounce new shows with an empty image" do
+    it "should bounce new shows with no image url" do
       @new_show.inage_url = nil
       @new_show.should_not be_valid
     end

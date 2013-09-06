@@ -13,4 +13,10 @@
 
 
   .form-actions
-    = f.button :submit
+    .button-group.round
+      %li
+        = f.button :submit, "Update show", :class => "button button-black"
+      %li
+        = link_to 'Show', @show, :class => "button button-black"
+      %li
+        = link_to 'Back', shows_path, :class => "button button-black"

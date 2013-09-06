@@ -13,8 +13,13 @@
       - if user_signed_in?
         %ul.right
           %li.divider.hide-for-small
-          %li
+          %li.has-dropdown.not-click
             = link_to "#{current_user.username}", root_path
+            %ul.dropdown
+              %li
+                = link_to "My shows", shows_path
+              %li
+                = link_to "All shows", shows_path
           %li.divider.hide-for-small
           %li
             = link_to 'Settings', edit_user_registration_path

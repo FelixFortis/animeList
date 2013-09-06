@@ -1313,9 +1313,30 @@ a {
   background-color: #c60f13;
   text-align: center;
 }
+.alternating {
+  padding:20px;
+  &:nth-child(even) {
+    background-color: #cccccc;
+    border:1px solid #989898;
+  }
+  &:nth-child(odd) {
+    border-left:1px solid #989898;
+    border-right:1px solid #989898;
+  }
+  &:first-child {
+    border-top:1px solid #989898;
+  }
+  &:last-child {
+    border-bottom:1px solid #989898;
+  }
+}
+body {
+  margin-bottom: 40px;
+}
 .button-black {
   background-color: #111;
   border-color: #001;
+  font-size: 80%;
   &:hover {
     background-color: #111;
     border-color: #001;
@@ -1355,6 +1376,10 @@ footer {
 }
 .top-bar-section ul li > a:hover {
   color: #efa417;
+}
+.sticky-right {
+  position: absolute;
+  right: 0;
 }
 .white-text {
   color: #fff;
