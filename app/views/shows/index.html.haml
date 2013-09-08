@@ -1,26 +1,10 @@
-%h1 Listing shows
+- provide :title, 'All shows'
+
+%h1 All shows
 
 .row
   .small-12.columns
-    - @shows.each do |show|
-      .row.alternating
-        .large-3.columns
-          = image_tag "#{show.image_url}"
-        .large-9.columns
-          %h4= show.name
-          %p
-            %strong
-              Description:
-            = show.description
-          %p
-            %strong
-              Episodes:
-            #{show.total_episodes}
-          .button-group.round
-            %li
-              = link_to 'Edit', edit_show_path(show), :class => "button button-black"
-            %li
-              = link_to 'Delete', show, :method => :delete, :data => { :confirm => 'Are you sure?' }, :class => "button button-black"
+    = render 'layouts/all_shows'
 
 %br
 

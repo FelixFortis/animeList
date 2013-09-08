@@ -2,6 +2,24 @@ require 'spec_helper'
 
 describe Show do
 
+  describe "visiting the shows pages" do
+    subject { page }
+
+    describe "shows index page" do
+      before { visit shows_path }
+
+      it { should have_title('animeList | All shows') }
+      it { should have_selector('h1', text: 'All shows') }
+    end
+
+    describe "shows new page" do
+      before { visit new_show_path }
+
+      it { should have_title('animeList | New show') }
+      it { should have_selector('h1', text: 'New show') }
+    end
+  end
+
   describe "new shows page" do
 
     before :each do
@@ -18,8 +36,8 @@ describe Show do
     end
 
     it "should bounce new shows with a duplicate name" do
-      @new_show.name = "Aquarion Evol"
-      @new_show.should_not be_valid
+      @dupe_show = FactoryGirl.build(:show)
+      @dupe_show.should_not be_valid
     end
 
     it "should bounce new shows with an empty description" do
@@ -28,7 +46,7 @@ describe Show do
     end
 
     it "should bounce new shows with no image url" do
-      @new_show.inage_url = nil
+      @new_show.image_url = nil
       @new_show.should_not be_valid
     end
 
