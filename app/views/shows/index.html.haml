@@ -8,4 +8,7 @@
 
 %br
 
-= link_to 'New Show', new_show_path, class: "button round button-black"
+- if current_user.admin?
+  = link_to 'New show', new_show_path, class: "button round button-black"
+
+= link_to 'My shows', new_show_path, class: "button round button-black"
