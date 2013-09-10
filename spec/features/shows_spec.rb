@@ -1,5 +1,3 @@
-require 'spec_helper'
-
 describe Show do
 
   describe "visiting the shows pages" do

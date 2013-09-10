@@ -1,5 +1,3 @@
-require 'spec_helper'
-
 describe "static pages" do
 
   subject { page }
