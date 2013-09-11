@@ -15,8 +15,9 @@
       .button-group.round
         %li
           = link_to 'Details', show_path(show), :class => "button button-black"
-        - if current_user.admin?
-          %li
-            = link_to 'Edit', edit_show_path(show), :class => "button button-black"
-          %li
-            = link_to 'Delete', show, :method => :delete, :data => { :confirm => 'Are you sure?' }, :class => "button button-black"
+        -if user_signed_in?
+          - if current_user.admin?
+            %li
+              = link_to 'Edit', edit_show_path(show), :class => "button button-black"
+            %li
+              = link_to 'Delete', show, :method => :delete, :data => { :confirm => 'Are you sure?' }, :class => "button button-black"

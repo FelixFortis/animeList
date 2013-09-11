@@ -1,4 +1,5 @@
 class ShowsController < ApplicationController
+
   # GET /shows
   # GET /shows.json
   def index
